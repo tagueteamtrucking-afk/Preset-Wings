@@ -1,0 +1,36 @@
+{
+  "export": {
+    "format": "glb",                 // "glb" or "vrm" (vrm needs VRM exporter enabled)
+    "folder": "build/out",           // output folder
+    "fps": 24,
+    "flap_degrees": 25,              // max flap angle (+/-)
+    "flap_period_frames": 48,        // one full cycle in frames
+    "breath_degrees": 2              // subtle chest motion
+  },
+  "characters": [
+    {
+      "name": "WhiteStar",
+      "vrm": "asset/models/whitestar.vrm",
+      "attach_bone": "chest",            // preferred: chest; fallback: spine / upper_chest
+      "wings": {
+        "file": "asset/wings/angel_01/angel_01.fbx",
+        "preferred_import": "fbx",       // "fbx" | "gltf" | "obj" (script will auto-try)
+        "pivot": "spine",                // how to align on back; leave "spine"
+        "scale_hint": 1.0,               // fallback multiplier
+        "offset": [0.0, 0.0, -0.03]      // slight push back
+      }
+    },
+    {
+      "name": "Reyczar",
+      "vrm": "asset/models/reyczar.vrm",
+      "attach_bone": "chest",
+      "wings": {
+        "file": "asset/wings/dragon_01/dragon_01.fbx",
+        "preferred_import": "fbx",
+        "pivot": "spine",
+        "scale_hint": 0.95,
+        "offset": [0.0, 0.0, -0.04]
+      }
+    }
+  ]
+}
