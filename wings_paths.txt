@@ -1,0 +1,31 @@
+.nojekyll
+# Wing assets (models + textures)
+asset/wings/**
+asset/wings/**/*.fbx
+asset/wings/**/*.obj
+asset/wings/**/*.mtl
+asset/wings/**/*.gltf
+asset/wings/**/*.glb
+asset/wings/**/*.png
+asset/wings/**/*.jpg
+asset/wings/**/*.jpeg
+asset/wings/**/*.tga
+asset/wings/**/*.exr
+asset/wings/**/*.hdr
+asset/wings/**/*.zip
+asset/wings/**/*.rar
+
+# Wing code + UI
+asset/js/wings-*.js
+asset/js/ui-wings*.js
+asset/js/vrm-wings*.js
+
+# Pages & manifests for wings
+pages/wings-*.html
+pages/wings/*.html
+wings.manifest.json
+wings.settings.json
+
+# Optional: per-character presets (if present in this repo)
+asset/presets/wings/**
+asset/models/**/*.vrm
