@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Wings Lab</title>
+    <style>
+      html,body { height: 100%; margin: 0; background:#0b0b12; }
+      #scene { width: 100vw; height: 100vh; display:block; }
+      .topbar {
+        position: fixed; left: 0; top: 0; right:0; height: 44px;
+        background: rgba(0,0,0,0.45); color:#ddd;
+        display:flex; align-items:center; gap:10px; padding:0 12px;
+        backdrop-filter: blur(8px);
+        z-index: 9998;
+      }
+      .topbar select, .topbar button {
+        background: #1d1d25; color:#ddd; border:1px solid #444; border-radius:8px; padding:6px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div><strong>Wings Lab</strong></div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <label>Character:
+          <select id="modelName">
+            <option>WhiteStar</option>
+            <option>Abbey</option>
+            <option>Alexandria</option>
+            <option>Billie</option>
+            <option>Carol</option>
+            <option>Charlotte</option>
+            <option>Jem</option>
+            <option>Nina</option>
+            <option>Odessa</option>
+            <option>Reyczar</option>
+            <option>Sorcha</option>
+            <option>Themis</option>
+            <option>Tracy</option>
+            <option>Stella</option>
+            <option>Clarice</option>
+          </select>
+        </label>
+        <button id="reload">Load</button>
+      </div>
+    </div>
+    <canvas id="scene"></canvas>
+
+    <script type="module">
+      import { initWingsLab } from "../asset/js/wings-bundle.js";
+      let app;
+      async function boot(name) {
+        if (app && app.renderer) {
+          app.renderer.dispose();
+        }
+        app = await initWingsLab({ canvasId: 'scene', modelName: name });
+      }
+      const sel = document.getElementById('modelName');
+      document.getElementById('reload').addEventListener('click', () => boot(sel.value));
+      boot(sel.value);
+    </script>
+  </body>
+</html>
