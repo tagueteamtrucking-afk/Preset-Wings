@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Abbey",
+    "file": "asset/models/abbey.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Alexandria",
+    "file": "asset/models/alexandria.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Billie",
+    "file": "asset/models/billie.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Carol",
+    "file": "asset/models/carol.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Charlotte",
+    "file": "asset/models/charlotte.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Jem",
+    "file": "asset/models/jem.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Nina",
+    "file": "asset/models/nina.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Odessa",
+    "file": "asset/models/odessa.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Reyczar",
+    "file": "asset/models/reyczar.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Sorcha",
+    "file": "asset/models/sorcha.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Themis",
+    "file": "asset/models/themis.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "WhiteStar",
+    "file": "asset/models/whitestar.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Tracy",
+    "file": "asset/models/tracy.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Stella",
+    "file": "asset/models/stella.vrm",
+    "wings": "@all"
+  },
+  {
+    "name": "Clarice",
+    "file": "asset/models/clarice.vrm",
+    "wings": "@all"
+  }
+]

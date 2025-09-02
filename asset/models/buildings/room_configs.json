@@ -1,0 +1,254 @@
+{
+  "palace_throne": {
+    "title": "Palace \u2014 White Star & Rey Czar",
+    "glb": "asset/models/buildings/palace_throne.glb",
+    "sky": "#08080c",
+    "floor": "#241a2a",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "grand_library": {
+    "title": "Grand Library \u2014 Alexandria",
+    "glb": "asset/models/buildings/grand_library.glb",
+    "sky": "#0b0b12",
+    "floor": "#2b2520",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "cathedral_studio": {
+    "title": "Cathedral Studio \u2014 Tracy",
+    "glb": "asset/models/buildings/cathedral_studio.glb",
+    "sky": "#0b0b12",
+    "floor": "#2a2030",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "observatory_apothecary": {
+    "title": "Observatory & Apothecary \u2014 Stella",
+    "glb": "asset/models/buildings/observatory_apothecary.glb",
+    "sky": "#0a0e18",
+    "floor": "#1a2028",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "dojo": {
+    "title": "Dojo \u2014 Jem",
+    "glb": "asset/models/buildings/dojo.glb",
+    "sky": "#0b0b12",
+    "floor": "#202822",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "restaurant": {
+    "title": "Restaurant \u2014 Carol",
+    "glb": "asset/models/buildings/restaurant.glb",
+    "sky": "#0b0b12",
+    "floor": "#232323",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "blue_lab": {
+    "title": "Blue Lab \u2014 Nina",
+    "glb": "asset/models/buildings/blue_lab.glb",
+    "sky": "#090d14",
+    "floor": "#172129",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "relay_tower": {
+    "title": "Relay Tower \u2014 Charlotte",
+    "glb": "asset/models/buildings/relay_tower.glb",
+    "sky": "#0b0b12",
+    "floor": "#1e1f22",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "grand_vault": {
+    "title": "Grand Vault \u2014 Abbey",
+    "glb": "asset/models/buildings/grand_vault.glb",
+    "sky": "#0b0b12",
+    "floor": "#26231a",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "art_mansion": {
+    "title": "Art Sales Mansion \u2014 Billie",
+    "glb": "asset/models/buildings/art_mansion.glb",
+    "sky": "#0b0b12",
+    "floor": "#241a22",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "museum_mansion": {
+    "title": "Museum Mansion \u2014 Odessa",
+    "glb": "asset/models/buildings/museum_mansion.glb",
+    "sky": "#0b0b12",
+    "floor": "#23201a",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "social_mansion": {
+    "title": "Social Mansion \u2014 Sorcha",
+    "glb": "asset/models/buildings/social_mansion.glb",
+    "sky": "#0b0b12",
+    "floor": "#231a22",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "compliance_chamber": {
+    "title": "Chamber of Compliance \u2014 Themis",
+    "glb": "asset/models/buildings/compliance_chamber.glb",
+    "sky": "#0b0b12",
+    "floor": "#1d2224",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "city_hall": {
+    "title": "City Hall \u2014 Clarice",
+    "glb": "asset/models/buildings/city_hall.glb",
+    "sky": "#0b0b12",
+    "floor": "#1d241d",
+    "spawn": {
+      "pos": [
+        0,
+        0,
+        1.6
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
