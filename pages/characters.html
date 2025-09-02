@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Characters</title>
+<style>html,body{margin:0;background:#0b0b12;color:#e6e6f0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto}.wrap{max-width:980px;margin:0 auto;padding:16px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}.card{border:1px solid #2a2a3a;border-radius:12px;background:#15151f;padding:10px}.name{font-weight:700}a{color:#bcd1ff;text-decoration:none}.muted{opacity:.8;font-size:.9em}</style></head>
+<body><div class="wrap"><h1>Characters</h1><div id="meta" class="muted">Loading manifest…</div><div class="grid" id="list"></div></div>
+<script type="module">
+const listEl=document.getElementById('list'); const meta=document.getElementById('meta');
+const models=await (await fetch('../asset/models/models.json',{cache:'no-store'})).json().catch(()=>[]);
+const rooms=await (await fetch('../asset/models/buildings/room_characters.json',{cache:'no-store'})).json().catch(()=>({}));
+meta.textContent=`Found ${models.length} characters.`;
+for(const m of models){
+  const card=document.createElement('div'); card.className='card';
+  const nm=(m.name||m.file).replace(/^.*\//,'');
+  const room=Object.keys(rooms).find(k=>rooms[k].toLowerCase().includes(nm.toLowerCase().replace(/\.vrm$/,'')))||'palace_throne';
+  card.innerHTML=`<div class="name">${nm}</div><div class="muted">${m.file}</div><div class="muted">Room: ${room}</div>
+  <div style="margin-top:6px"><a href="./room_vrm.html?room=${encodeURIComponent(room)}&model=${encodeURIComponent(m.file)}">Open in room</a> · <a href="./wings-lab.html">Wings Lab</a></div>`;
+  listEl.appendChild(card);
+}
+</script></body></html>

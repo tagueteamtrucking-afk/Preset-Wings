@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Wings Lab</title>
+<style>html,body{height:100%;margin:0;background:#0b0b12;color:#e6e6f0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto}.top{padding:8px;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);position:fixed;left:0;right:0;top:0;z-index:9}#scene{width:100vw;height:100vh;display:block;margin-top:52px}</style></head>
+<body><div class="top"><label>Character <select id="char"></select></label><label style="margin-left:10px">Wing <select id="wing"></select></label><button id="load">Load</button><a href="./characters.html" style="margin-left:10px;color:#bcd1ff">Characters</a></div><canvas id="scene"></canvas>
+<script type="module">
+import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js';
+import { VRMUtils, VRM } from 'https://unpkg.com/@pixiv/three-vrm@3.2.0/lib/three-vrm.module.js';
+import { WingRig, loadWingsList } from '../asset/js/wings-bundle.js';
+const charSel=document.getElementById('char'), wingSel=document.getElementById('wing');
+const models=await (await fetch('../asset/models/models.json',{cache:'no-store'})).json().catch(()=>[]);
+for(const m of models){ const o=document.createElement('option'); o.value=m.file; o.textContent=m.name||m.file; charSel.appendChild(o); }
+const wings=await loadWingsList('../asset/models/wings/wings.json').catch(()=>[]);
+for(const w of wings){ const o=document.createElement('option'); o.value=w; o.textContent=w.replace(/^.*\//,''); wingSel.appendChild(o); }
+const canvas=document.getElementById('scene'); const renderer=new THREE.WebGLRenderer({canvas,antialias:true}); renderer.setSize(innerWidth,innerHeight); renderer.setPixelRatio(Math.min(2,devicePixelRatio||1));
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0b0b12); const camera=new THREE.PerspectiveCamera(30,innerWidth/innerHeight,0.1,100); camera.position.set(0,1.5,3.2);
+scene.add(new THREE.HemisphereLight(0xffffff,0x223344,0.8)); const dir=new THREE.DirectionalLight(0xffffff,1.1); dir.position.set(2,4,3); dir.castShadow=true; scene.add(dir);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(20,20),new THREE.MeshStandardMaterial({color:0x22222a,metalness:0.2,roughness:0.8})); ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
+let vrm, rig; async function load(){ if(vrm){ scene.remove(vrm.scene); } const L=new GLTFLoader(); const gltf=await L.loadAsync(charSel.value); VRMUtils.removeUnnecessaryJoints(gltf.scene); ({ vrm } = await VRM.from(gltf)); scene.add(vrm.scene); rig=new WingRig(vrm); rig.showUI(); if(wingSel.value) await rig.load(wingSel.value); }
+document.getElementById('load').onclick=load;
+function animate(){ renderer.render(scene,camera); requestAnimationFrame(animate);} animate();
+addEventListener('resize', ()=>{ camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight); });
+</script></body></html>
